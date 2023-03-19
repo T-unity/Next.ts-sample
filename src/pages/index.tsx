@@ -16,10 +16,10 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <section>
-          {/* <h1>init</h1> */}
-          {/* <p>the game has only just began</p> */}
           <h2>最新の記事一覧</h2>
           <p><Link href="/blogs/2023-0319">テスト投稿</Link></p>
+          <h2>API</h2>
+          <p><Link href="/api/hello">test API</Link></p>
         </section>
       </main>
     </>
