@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,8 +16,10 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <section>
-          <h1>init</h1>
-          <p>the game has only just began</p>
+          {/* <h1>init</h1> */}
+          {/* <p>the game has only just began</p> */}
+          <h2>最新の記事一覧</h2>
+          <p><Link href="/blogs/2023-0319">テスト投稿</Link></p>
         </section>
       </main>
     </>
