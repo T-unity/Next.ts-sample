@@ -5,7 +5,7 @@ type TestObj = {
 	children: ReactNode;
 };
 
-const OutputFC: FC<TestObj> = ({ children }) => {
+const Layout: FC<TestObj> = ({ children }) => {
 	return (
     <>
       <div className={styles.container}>
@@ -15,4 +15,4 @@ const OutputFC: FC<TestObj> = ({ children }) => {
   )
 };
 
-export default OutputFC;
+export default Layout;
