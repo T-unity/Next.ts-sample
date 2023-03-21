@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { useAuth } from '../context/auth';
 import { login } from '../lib/auth';
+import Button from './button';
+import UserMenu from './user-menu';
 
 const Header = () => {
 
@@ -26,8 +28,9 @@ const Header = () => {
         <Link href="/">Site Title</Link>
       </h1>
       <span className="flex-1"></span>
-      { user === null && !waiting && <button onClick={signIn}>ログイン</button> }
-      { user && <button>ユーザーメニュー</button> }
+      { user === null && !waiting && <Button onClick={signIn}>ログイン</Button> }
+      {/* components/user-menu.tsx */}
+      {user && <UserMenu />}
     </header>
   );
 };
