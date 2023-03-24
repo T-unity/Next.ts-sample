@@ -1,0 +1,28 @@
+.main {
+  background: linear-gradient(#31897f, #1b1f51);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+}
+
+.h2text {
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+}
+
+@keyframes rotateY {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(1080deg);
+  }
+}
+
+.rotateYAnimation {
+  animation: rotateY 1s linear forwards;
+}
