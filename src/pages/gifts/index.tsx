@@ -2,6 +2,14 @@ import Head from 'next/head'
 import styles from '@/styles/Gift.module.css'
 import ImageRotator from 'lib/ImageRotator'
 
+const imageInfo = {
+  initial: '/kujibiki.png',
+  hit: '/kuji_atari.png',
+  miss: '/kuji_hazure.png',
+}
+
+const images = Array(4).fill(imageInfo);
+
 export default function Gift() {
   return (
     <>
@@ -14,15 +22,18 @@ export default function Gift() {
         <section>
           <h2 className={styles.h2text}>カードを一枚タップしてください</h2>
           <div>
-          <ImageRotator
-            initialImage="/kujibiki.png"
-            resultImages={{
-              hit: '/kuji_atari.png',
-              miss: '/kuji_hazure.png',
-            }}
-            width={300}
-            height={300}
-          />
+            {images.map((image, index) => (
+              <ImageRotator
+                key={index}
+                initialImage={image.initial}
+                resultImages={{
+                  hit: image.hit,
+                  miss: image.miss,
+                }}
+                width={300}
+                height={300}
+              />
+            ))}
           </div>
         </section>
       </main>

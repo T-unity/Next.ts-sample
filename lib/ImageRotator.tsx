@@ -13,7 +13,7 @@ const ImageRotator: React.FC<Props> = ({ initialImage, resultImages, width, heig
   const [imageSrc, setImageSrc] = useState(initialImage);
   const [animationClass, setAnimationClass] = useState('');
 
-  const handleClick = () => {
+  const displayImage = () => {
     setAnimationClass(styles.rotateYAnimation);
 
     setTimeout(() => {
@@ -27,7 +27,7 @@ const ImageRotator: React.FC<Props> = ({ initialImage, resultImages, width, heig
     <Image
       src={imageSrc}
       alt="Image Rotator"
-      onClick={handleClick}
+      onClick={displayImage}
       className={animationClass}
       width={width}
       height={height}
