@@ -13,7 +13,12 @@ const ImageRotator: React.FC<Props> = ({ initialImage, resultImages, width, heig
   const [imageSrc, setImageSrc] = useState(initialImage);
   const [animationClass, setAnimationClass] = useState('');
 
+  const [isTappable, setIsTappable] = useState(true);
+
   const displayImage = () => {
+    if (!isTappable) return;
+    setIsTappable(false);
+
     setAnimationClass(styles.rotateYAnimation);
 
     setTimeout(() => {

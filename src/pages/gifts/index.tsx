@@ -20,7 +20,7 @@ export default function Gift() {
       </Head>
       <main className={styles.main}>
         <section>
-          <h2 className={styles.h2text}>カードを一枚タップしてください</h2>
+          <h2 className={styles.h2text}>一枚選択</h2>
           <div>
             {images.map((image, index) => (
               <ImageRotator
