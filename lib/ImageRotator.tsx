@@ -21,11 +21,15 @@ const ImageRotator: React.FC<Props> = ({ initialImage, resultImages, width, heig
 
     setAnimationClass(styles.rotateYAnimation);
 
+    // TODO:ここのsetTimeoutの時間をCSSのアニメーションと調整するのが面倒。アニメーションの終了を検知して対応できないか。
+    // アニメーションの終了を検知：https://monohibi.com/posts/css-animationend-event
     setTimeout(() => {
       const isHit = Math.random() >= 0.5;
       setImageSrc(isHit ? resultImages.hit : resultImages.miss);
       setAnimationClass('');
     }, 1000);
+    // --------
+
   };
 
   return (

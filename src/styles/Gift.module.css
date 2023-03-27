@@ -1,5 +1,5 @@
 .main {
-  background: linear-gradient(#31897f, #1b1f51);
+  background: linear-gradient(#e3e3e3, #1b1f51);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -20,7 +20,7 @@
     transform: rotateY(0);
   }
   to {
-    transform: rotateY(1080deg);
+    transform: rotateY(2160deg);
   }
 }
 

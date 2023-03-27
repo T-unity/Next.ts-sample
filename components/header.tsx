@@ -24,7 +24,7 @@ const Header = () => {
 
   return (
     <header className="border-b flex items-center h-14 px-4">
-      <h1 className="pl-10 ml-10">
+      <h1>
         <Link href="/">Site Title</Link>
       </h1>
       <span className="flex-1"></span>
