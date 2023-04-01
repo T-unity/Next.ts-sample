@@ -1,4 +1,5 @@
 import UserGuard from "guards/user-guard";
+import UserCard from '../../components/user-card';
 import { PencilIcon, ShareIcon } from '@heroicons/react/24/solid';
 import Link from "next/link";
 import { useAuth } from "context/auth";
@@ -24,7 +25,6 @@ const Mypage = () => {
       {(user) => (
         <div className="bg-gray-100 pt-10 pb-20">
           <div className="container">
-            {/* 追加 */}
             <div className="max-w-screen-sm mx-auto flex items-center space-x-2 justify-end mb-2">
               {actions.map((action) => (
                 <Link legacyBehavior href={action.link} key={action.label}>
@@ -35,6 +35,8 @@ const Mypage = () => {
                 </Link>
               ))}
             </div>
+	    {/* カードコンポーネントを追加 */}
+            <UserCard user={user} />
           </div>
         </div>
       )}
